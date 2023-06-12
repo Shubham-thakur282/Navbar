@@ -1,0 +1,75 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: 'ubuntu',sans-serif;
+}
+
+.navbar{
+    background-color: rgba(19, 141, 92, 0.785);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 5rem;/*rem follow the size of the root element*/   
+}
+
+.left h1{
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.checkbtn,#check{
+    display: none;
+}
+
+.right ul{
+    display: flex;
+    list-style: none;
+}
+
+.right ul li a{
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 1s;
+}
+
+.right ul li a:hover{
+    background-color: white;
+    border-radius: 7px;
+    color: rgba(19, 141, 92, 0.785);
+}
+
+
+@media screen and (max-width:805px) {
+    .list{
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(19, 141, 92, 0.785);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 4rem;
+        left: 100%;
+        transition: all 1s;
+    }
+
+    #check{
+        display: none;
+    }
+
+    .checkbtn{
+        display: block;
+    }
+
+    #check:checked~ul{
+        left: 0%;
+        display: flex;
+    }
+    
+}
+
